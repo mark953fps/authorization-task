@@ -27,4 +27,12 @@ export class AppComponent implements OnInit {
     console.log(index, 'index');
     this.dataList[index].isSelected = true;
   }
+
+  public numberFormatter(data) {
+    return Number(data);
+  }
+
+  public testFunction() {
+    
+  }
 }
