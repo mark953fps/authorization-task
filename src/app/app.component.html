@@ -1,28 +1,28 @@
 <div class="container">
-  <label>Select 1 : </label>
-  <select [(ngModel)]="select1" (change)="onChange($event)">
-    <ng-container *ngFor="let data of dataList">
-      <option *ngIf="!data.isSelected || data.id === numberFormatter(select1)" [value]="data.id">{{ data.name }}</option>
-    </ng-container>
-  </select>
+<label>Select 1 : </label>
+<select [(ngModel)]="select1" (change)="onChange($event)">
+  <ng-container *ngFor="let data of dataList">
+    <option *ngIf="!data.isSelected || data.id === numberFormatter(select1)" [value]="data.id">{{ data.name }}</option>
+  </ng-container>
+</select>
 </div>
 
 <div class="container">
-  <label>Select 2 : </label>
-  <select [(ngModel)]="select2" (change)="onChange($event)">
-    <ng-container *ngFor="let data of dataList">
-      <option *ngIf="!data.isSelected || data.id === numberFormatter(select2)" [value]="data.id">{{ data.name }}</option>
-    </ng-container>
-  </select>
+<label>Select 2 : </label>
+<select [(ngModel)]="select2" (change)="onChange($event)">
+  <ng-container *ngFor="let data of dataList">
+    <option *ngIf="!data.isSelected || data.id === numberFormatter(select2)" [value]="data.id">{{ data.name }}</option>
+  </ng-container>
+</select>
 </div>
 
 <div class="container">
-  <label>Select 3 : </label>
-  <select [(ngModel)]="select3" (change)="onChange($event)">
-    <ng-container *ngFor="let data of dataList">
-      <option *ngIf="!data.isSelected || data.id === numberFormatter(select3)" [value]="data.id">{{ data.name }}</option>
-    </ng-container>
-  </select>
+<label>Select 3 : </label>
+<select [(ngModel)]="select3" (change)="onChange($event)">
+  <ng-container *ngFor="let data of dataList">
+    <option *ngIf="!data.isSelected || data.id === numberFormatter(select3)" [value]="data.id">{{ data.name }}</option>
+  </ng-container>
+</select>
 </div>
 
 <pre>{{ dataList | json }}</pre>
