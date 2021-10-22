@@ -21,6 +21,9 @@ export class AppComponent implements OnInit {
   public ngOnInit() {}
 
   public onChange(event) {
+
+    this.dataList.filter(d => ((Number(d.id) !== Number(this.select1)) && (Number(d.id) !== Number(this.select2))) && (Number(d.id) !== Number(this.select3)) ? d.isSelected = false : '');
+
     console.log(event.target.value);
     let id = event.target.value;
     let index = this.dataList.findIndex((d) => Number(d.id) === Number(id));
@@ -33,6 +36,6 @@ export class AppComponent implements OnInit {
   }
 
   public testFunction() {
-    
+
   }
 }
