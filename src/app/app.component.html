@@ -1,0 +1,28 @@
+<div class="container">
+  <label>Select 1 : </label>
+  <select [(ngModel)]="select1" (change)="onChange($event)">
+    <ng-container *ngFor="let data of dataList">
+      <option [value]="data.id">{{ data.name }}</option>
+    </ng-container>
+  </select>
+</div>
+
+<div class="container">
+  <label>Select 2 : </label>
+  <select [(ngModel)]="select2">
+    <ng-container *ngFor="let data of dataList" (change)="onChange($event)">
+      <option [value]="data.id">{{ data.name }}</option>
+    </ng-container>
+  </select>
+</div>
+
+<div class="container">
+  <label>Select 3 : </label>
+  <select [(ngModel)]="select3">
+    <ng-container *ngFor="let data of dataList" (change)="onChange($event)">
+      <option [value]="data.id">{{ data.name }}</option>
+    </ng-container>
+  </select>
+</div>
+
+<pre>{{ dataList | json }}</pre>
